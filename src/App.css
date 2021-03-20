@@ -1,38 +1,92 @@
+* {
+  padding: 0;
+  margin: 0;
+  --scarlet: #FF2400;
+  --indian-red: #CD5C5C;
+  --fire-red: #B22222;
+  --carmine-red: #960018;
+  --maroon: #800000;
+  overflow-x: hidden !important;
+}
+
+*::-webkit-scrollbar {
+  padding: 3px;
+  width: 12px !important;
+  background-color: var(--indian-red);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 30px;
+  background-color: var(--carmine-red) !important;
+}
+
 .App {
+}
+
+.items {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  padding: 50px;
+  color: whitesmoke;
+  background-image: linear-gradient(300deg, var(--fire-red), var(--indian-red));
+}
+
+.items .items-inner {
+  display: flex;
+  text-align: center;
+  flex-direction: row;
+}
+
+.items .items-inner .menu-item {
+  padding: 10px;
+}
+
+.recipes h1, .container h1, .items h1 {
+  font-size: 40px;
+  color: whitesmoke;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.items .items-inner .menu-item img {
+  padding: 20px;
+  height: 300px;
+  border-radius: 20%;
+  width: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.footer {
+  background-image: linear-gradient(300deg, var(--fire-red), var(--indian-red));
+  color: whitesmoke;
+  padding: 10px;
+}
+
+.footer p {
+  font-size: larger;
+}
+
+.footer-fa-icon {
+  margin-left: 3px;
+  margin-right: 3px;
+  background: none !important;
+  font-size: large;
+  padding: 7px;
+  transition: all 0.75s;
+}
+
+.footer-fa-icon:hover {
+  background-color: white !important;
+  color: var(--fire-red);
+  border-radius: 50% !important;
+}
+
+@media (max-width: 1150px) {
+  .items .items-inner {
+    flex-direction: column !important;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  .items .items-inner .menu-item img {
+    height: 150px !important;
+    width: auto;
   }
 }

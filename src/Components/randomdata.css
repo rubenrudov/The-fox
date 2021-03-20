@@ -1,0 +1,39 @@
+.recipes {
+  background-image: linear-gradient(300deg, var(--fire-red), var(--indian-red));
+  border-bottom: solid 3px whitesmoke;
+}
+
+.fragment {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.img {
+    border-radius: 30px;
+    width: 300px !important;
+    height: auto;
+}
+
+.random-drink {
+    height: 40px;
+    border-radius: 15px !important;
+    padding: 10px;
+    width: auto;
+    background-color: var(--maroon);
+    color: whitesmoke;
+    font-size: medium;
+    transition: all 1s;
+}
+
+
+.random-drink:hover {
+    background-color: var(--indian-red);
+}
+
+@media screen and (max-width: 800px) {
+    .img {
+        border-radius: 30px;
+        width: 150px !important;
+        height: auto;
+    }
+}
